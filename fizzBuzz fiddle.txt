@@ -1,0 +1,29 @@
+function isDivisibleByY(i,y){
+	if(i%y==0)
+    	return true;
+	else 
+    	return false
+}
+$('document').ready(function(){
+    var t_s1='<span style="color:green">';
+    var s2='</span><br>';
+    var f_s1='<span style="color:red">';
+    var doc='';
+    for (var i=1; i<=100; i++){
+        var res=isDivisibleByY(i,3);
+        console.log ("DEBUG result for i=%o is %o",i,res); 
+        var s='';
+        if(res){
+            s=t_s1;
+        }
+        else 
+            s=f_s1;
+        s=s+i+s2;
+        console.log(s);
+        doc=doc+s;
+    }
+    console.log("DEBUG "+doc)
+	$('#content').html(doc);
+});
+
+
